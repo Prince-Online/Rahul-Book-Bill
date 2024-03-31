@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     text-align: center;
     margin: 10px 0;
   }
-  #bill-form {
+  #bill-book {
     margin-bottom: 20px;
   }
   #bill-table {
@@ -72,6 +72,27 @@
   label{
     font-weight: bold;
   }
+  hr {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px 0;
+  }
+  #logo-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  #logo {
+    width: 150px; 
+    /* Adjust the size as needed */
+  }
+  #qr-code {
+    width: 100px; /* Adjust the size as needed */
+    margin-left: 10px;
+  }
   @media (min-width: 600px) {
     #bill-table {
       width: 80%;
@@ -84,9 +105,14 @@
 </style>
 </head>
 <body>
-  <form id="bill-form">
-    <h3 style="text-align: center;"><u>Money Invoice</u></h3>
-    <h1>RAHUL BOOK POINT</h1>
+<form id="bill-book">
+<h3 style="text-align: center;"><u>Money Invoice</u></h3>
+  <div id="logo-container">
+    <img src="https://i.ibb.co/7Wp7v66/rbpicon.png" alt="Your Logo" id="logo" style="width: 90px;" >
+    <h3>RAHUL BOOK POINT</h3>&nbsp;
+    <img src="https://i.ibb.co/Zf76MvF/Screenshot-20240331-165900-2.png" alt="Your Logo" id="logo" style="width: 50px; height:50px;" >
+  </div>
+    
     <h4>All Types Of Books For Schools and Colleges & Stationary items available here.</h4>
     <p style="font-size: 15px; text-align: center;">Station Road, Kurmidih Bokaro Steel City -10</p>
     <hr>
@@ -172,7 +198,7 @@
       const paymentMethod = document.getElementById('payment-method').value;
       // Hide the buttons container before generating PDF
       document.getElementById('buttons-container').style.display = 'none';
-      const element = document.getElementById('bill-form');
+      const element = document.getElementById('bill-book');
       const options = {
         margin: [5, 5], // Adjust margins (top, right, bottom, left)
         filename: 'bill.pdf', // Specify the filename
